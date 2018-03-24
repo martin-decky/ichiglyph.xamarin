@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ichiglyph.xamarin"
+             x:Class="ichiglyph.xamarin.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Picker Grid.Row="0" x:Name="picker">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>IchiGlyph</x:String>
+                    <x:String>BrainFuck</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+            <Picker.SelectedIndex>0</Picker.SelectedIndex>
+        </Picker>
+        <Editor Grid.Row="1" x:Name="source" />
+        <Editor Grid.Row="2" x:Name="output" />
+        <Button Grid.Row="3" Text="Fetch" Clicked="OnFetchClick" />
+        <Button Grid.Row="4" Text="Run" Clicked="OnRunClick" />
+    </Grid>
+
+</ContentPage>
