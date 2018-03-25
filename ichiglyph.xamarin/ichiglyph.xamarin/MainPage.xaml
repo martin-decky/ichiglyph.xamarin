@@ -15,8 +15,8 @@
         <Picker Grid.Row="0" x:Name="picker">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
-                    <x:String>IchiGlyph</x:String>
-                    <x:String>BrainFuck</x:String>
+                    <x:String>Ichiglyph</x:String>
+                    <x:String>Brainfuck</x:String>
                 </x:Array>
             </Picker.ItemsSource>
             <Picker.SelectedIndex>0</Picker.SelectedIndex>
