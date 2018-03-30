@@ -197,7 +197,7 @@ namespace ichiglyph.xamarin {
 					val = DataGet(dp);
 
 					if (val == 0) {
-						int balance = 1;
+						uint balance = 1;
 
 						while (balance != 0) {
 							if (ip == program_size) {
@@ -229,7 +229,7 @@ namespace ichiglyph.xamarin {
 					val = DataGet(dp);
 
 					if (val != 0) {
-						int balance = 1;
+						uint balance = 1;
 
 						while (balance != 0) {
 							if (ip == 0) {
