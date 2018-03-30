@@ -21,7 +21,7 @@ namespace ichiglyph.xamarin {
 		};
 
 		private const int DATA_GRANULARITY = 32768;
-		private int[] data;
+		private uint[] data;
 		private int size;
 
 		public MainPage()
@@ -120,7 +120,7 @@ namespace ichiglyph.xamarin {
 
 		private void DataInit()
 		{
-			data = new int[0];
+			data = new uint[0];
 			size = 0;
 		}
 
@@ -144,7 +144,7 @@ namespace ichiglyph.xamarin {
 			data[dp]--;
 		}
 
-		private int DataGet(int dp)
+		private uint DataGet(int dp)
 		{
 			if (dp >= size)
 				return 0;
@@ -152,7 +152,7 @@ namespace ichiglyph.xamarin {
 			return data[dp];
 		}
 
-		private void DataSet(int dp, int val)
+		private void DataSet(int dp, uint val)
 		{
 			DataBound(dp);
 			data[dp] = val;
@@ -186,11 +186,11 @@ namespace ichiglyph.xamarin {
 					DataDec(dp);
 					break;
 				case Instruction.INST_VAL_OUTPUT:
-					int val = DataGet(dp);
+					uint val = DataGet(dp);
 					output.Text += Convert.ToChar(val);
 					break;
 				case Instruction.INST_VAL_ACCEPT:
-					int input_val = 0;  // TODO
+					uint input_val = 0;  // TODO
 					DataSet(dp, input_val);
 					break;
 				case Instruction.INST_JMP_FORWARD:
